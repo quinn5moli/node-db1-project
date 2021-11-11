@@ -22,7 +22,7 @@ const updateById = async (id, account) => {
   return getById(id)
 }
 
-const deleteById = id => {
+const deleteById = async (id) => {
   // DO YOUR MAGIC
   const toBeDeleted = await getById(id)
   await db('posts').where('id', id).delete()
